@@ -36,7 +36,7 @@ export function AppSidebar() {
           </div>
           <div className="flex flex-col gap-0.5">
             <span className="font-semibold tracking-tight text-sm">
-              SMK Admin
+              TELSA DATA
             </span>
             <span className="text-xs text-muted-foreground">
               Manajemen Siswa

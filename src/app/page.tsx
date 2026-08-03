@@ -30,7 +30,7 @@ export default function Home() {
       {/* Identitas Pengerjaan Tugas */}
       <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-dashed border-muted-foreground/30 text-center">
         <p className="text-sm font-medium text-muted-foreground">
-          Sistem Manajemen Siswa - [Nama Lengkap Kamu] | Kelas: [XI PPLG...]
+          Sistem Manajemen Siswa - Roiyan Felix | Kelas: XIC PPLG
         </p>
       </div>
     </div>
