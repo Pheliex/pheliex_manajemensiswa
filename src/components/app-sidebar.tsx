@@ -3,6 +3,9 @@ import {
   Users,
   School,
   ShieldAlert,
+  Search,
+  Mail,
+  Settings,
   GalleryVerticalEnd,
 } from "lucide-react";
 import {
@@ -17,12 +20,14 @@ import {
   SidebarHeader,
 } from "@/components/ui/sidebar";
 
-// Daftar menu dengan tambahan properti ikon
 const items = [
-  { title: "Dashboard", url: "/", icon: Home },
+  { title: "Search", url: "#", icon: Search },
+  { title: "Dashboard", url: "#", icon: Home },
   { title: "Data Siswa", url: "#", icon: Users },
   { title: "Data Kelas", url: "#", icon: School },
   { title: "Pelanggaran", url: "#", icon: ShieldAlert },
+  { title: "Email", url: "#", icon: Mail },
+  { title: "Setting", url: "#", icon: Settings },
 ];
 
 export function AppSidebar() {
