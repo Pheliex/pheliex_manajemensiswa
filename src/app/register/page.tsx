@@ -1,10 +1,13 @@
 "use client";
 
-import { ArrowLeft, Eye, EyeOff, Lock, Mail, User } from "lucide-react";
+import { Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+// 1. Tambahkan import Link
+import Link from "next/link";
 
-export default function HomePage() {
+export default function RegisterPage() {
+  // Aku ganti namanya jadi RegisterPage biar rapi
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [accountTerms, setAccountTerms] = useState(false);
@@ -36,7 +39,8 @@ export default function HomePage() {
     }
 
     console.log("Form submitted", formData);
-    router.push("/auth/login");
+    // 2. Perbaiki jalur redirect ke /login
+    router.push("/login");
   };
 
   const getPasswordStrength = (password: string) => {
@@ -60,13 +64,6 @@ export default function HomePage() {
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-blue-100 p-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/10 rounded-2xl" />
           <div className="relative z-10">
-            {/* <a
-                            href="/auth/login"
-                            className="flex items-center gap-2 text-gray-600 hover:text-gray-800 mb-6"
-                        >
-                            <ArrowLeft className="w-4 h-4"></ArrowLeft>
-                            Back to login
-                        </a> */}
             <div className="text-center mb-6">
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500/5 to-blue-600/100 rounded-full flex items-center justify-center mb-4 shadow-lg">
                 <User className="w-8 h-8 text-white" />
@@ -78,6 +75,7 @@ export default function HomePage() {
                 Join us today! It takes only a few steps.
               </p>
             </div>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <label
@@ -99,6 +97,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
+
               <div className="space-y-2">
                 <label
                   className="text-sm font-medium text-gray-700"
@@ -119,6 +118,7 @@ export default function HomePage() {
                   />
                 </div>
               </div>
+
               <div className="space-y-2">
                 <label
                   className="text-sm font-medium text-gray-700"
@@ -157,6 +157,7 @@ export default function HomePage() {
                   </div>
                 )}
               </div>
+
               <div className="space-y-2">
                 <label
                   className="text-sm font-medium text-gray-700"
@@ -198,6 +199,7 @@ export default function HomePage() {
                     </div>
                   ))}
               </div>
+
               <div className="flex items-center gap-2">
                 <input
                   type="checkbox"
@@ -214,6 +216,7 @@ export default function HomePage() {
                   </a>
                 </label>
               </div>
+
               <button
                 type="submit"
                 disabled={!isFormValid}
@@ -221,12 +224,14 @@ export default function HomePage() {
               >
                 Register
               </button>
+
               <div className="text-center">
                 <p className="text-sm text-gray-600">
                   Already have an account?{" "}
-                  <a href="/login" className="text-blue-600 hover:underline">
+                  {/* 3. Gunakan <Link> untuk navigasi yang lebih mulus */}
+                  <Link href="/login" className="text-blue-600 hover:underline">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </form>
