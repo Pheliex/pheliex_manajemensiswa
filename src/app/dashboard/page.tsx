@@ -1,34 +1,23 @@
 export default function DashboardPage() {
   return (
-    <div className="flex flex-col gap-6 p-4 md:p-6 w-full max-w-6xl mx-auto">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold tracking-tight">
-          Dashboard Overview
+    <div className="flex flex-col items-center justify-center p-8 mt-10">
+      <div className="border p-8 rounded-lg shadow-sm text-center bg-white">
+        <h1 className="text-3xl font-bold mb-6 text-black">
+          Sistem Manajemen Siswa - Roiyan Felix
         </h1>
-        <p className="text-muted-foreground">
-          Selamat datang kembali! Ini adalah ringkasan sistem manajemen siswa.
-        </p>
-      </div>
 
-      <div className="grid gap-4 md:grid-cols-3">
-        <div className="p-6 border rounded-xl bg-card text-card-foreground shadow-sm">
-          <h3 className="font-semibold text-lg">Total Siswa</h3>
-          <p className="text-3xl font-bold mt-2">--</p>
+        {/* Detail Identitas */}
+        <div className="flex flex-col gap-2 text-lg text-black">
+          <p>
+            <strong>Nama Lengkap:</strong> Roiyan Felix
+          </p>
+          <p>
+            <strong>Kelas:</strong> XI C PPLG
+          </p>
+          <p>
+            <strong>Judul Proyek:</strong> Sistem Manajemen Siswa
+          </p>
         </div>
-        <div className="p-6 border rounded-xl bg-card text-card-foreground shadow-sm">
-          <h3 className="font-semibold text-lg">Total Kelas</h3>
-          <p className="text-3xl font-bold mt-2">--</p>
-        </div>
-        <div className="p-6 border rounded-xl bg-destructive/10 border-destructive/20 text-destructive shadow-sm">
-          <h3 className="font-semibold text-lg">Pelanggaran Hari Ini</h3>
-          <p className="text-3xl font-bold mt-2">--</p>
-        </div>
-      </div>
-
-      <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-dashed border-muted-foreground/30 text-center">
-        <p className="text-sm font-medium text-muted-foreground">
-          Sistem Manajemen Siswa - Roiyan Felix | Kelas: XI C PPLG
-        </p>
       </div>
     </div>
   );
